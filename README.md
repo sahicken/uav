@@ -147,7 +147,10 @@ Insert 3D CAD file link.
 Electronics
 ===========
 
-Components list here. \# Competition
+Components list here.
+
+Competition
+===========
 
 Design
 ------

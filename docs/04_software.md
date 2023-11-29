@@ -22,3 +22,4 @@ Only the first command in the above codeblock is outside the container. Leave th
 	cd src/PX4-Autopilot/
 	HEADLESS=1 make px4_sitl gazebo-classic_standard_vtol
 	exit
+	
