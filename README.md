@@ -147,4 +147,24 @@ Insert 3D CAD file link.
 Electronics
 ===========
 
-Components list here. \# Design (Competition) \# Simulation \# Flight
+Components list here. \# Competition
+
+Design
+------
+
+Not to be confusion with the current team name.
+
+Simulation
+----------
+
+Flight
+------
+
+Design (Competition)
+====================
+
+Simulation
+==========
+
+Flight
+======
