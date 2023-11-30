@@ -35,8 +35,16 @@ The club discord and in person primarily. See answer above.
 Getting Started
 ===============
 
+This section is designed to simplify onboarding. Please be aware of the
+structure of Project "Teams" as well, covered shortly.
+
 Software
 --------
+
+Working on the Software Team effectively requires extensive knowledge of
+multiple software stacks that have not entirley been listed, let alone
+documented. I will continue to update this documenation. Please refer to
+Discord for more up-to-date info.
 
 ### Project Docs
 
@@ -51,7 +59,8 @@ links!**
 
 ### Dependencies
 
-Most Linux distros running a desktop environment should work, however
+Most Linux distros running a desktop environment should work for
+beginning the UAV Project, however
 [Fedora](https://docs.fedoraproject.org/en-US/fedora/latest/getting-started/)
 or [Ubuntu](https://ubuntu.com/tutorials/install-ubuntu-desktop) will be
 assumed. On Windows installing virtualization software such as
@@ -61,7 +70,7 @@ assumed. On Windows installing virtualization software such as
 highly recommended for virtualization. To reduce RAM requirements
 consider installing either Lubuntu or Xubuntu.
 
-After installing a supported distro, install docker using [these
+After installing a supported distro, you can install docker using [these
 instructions for Fedora](https://docs.docker.com/engine/install/fedora/)
 or [the Ubuntu instructions
 here](https://docs.docker.com/engine/install/ubuntu/). On Fedora you
@@ -70,38 +79,58 @@ just [configure docker to start upon
 boot](https://docs.docker.com/engine/install/linux-postinstall/#configure-docker-to-start-on-boot-with-systemd).
 This is unnecessary for Ubuntu.
 
-### note about sections
+3D acceleration is unsupported on Docker for the UAV Project. You will
+need to setup PX4 Autopilot to run Gazebo (Classic) under OpenGL by
+running Ubuntu 20.04 or higher natively. This is especially important
+for simulating Target Detection and Package Dropoff (Challenge).
+Documentation has not been created at this time.
 
-All sections should be limited to their most simple components in the
-getting started section
-
-Design
+3D CAD
 ------
 
-No design section in getting started yet.
+No 3D CAD Team section yet.
 
 Electronics
 -----------
 
-No electronics section either.
+No Electronics Team section either.
 
 Teams
 =====
 
-Software Team
--------------
+This section more clearly defines the UAV Project teams and overall
+internal structure of the UAV Project. We have been divided into 3 teams
+by the Club President. Be mindful of the Project organization and goals
+at all times. In order to effectively manage this project we need to be
+in sync and informed properly. Know who to talk to about what and when
+to not overload any AEC member. We all have to manage our school and
+even work duties. Please stay in touch with your team leader regularly
+and only go to the Club President for this project if needed.
 
-Design Team
+Software
+--------
+
+This Github is a great place to be involved on the Software Team. Please
+come to meeting and check our AEC Discord regularly! Welcome team!
+
+3D CAD
+------
+
+Electronics
 -----------
-
-Change the name of the design team to eliminate confusion between it and
-the design portition of the competition.
-
-Electronics Team
-----------------
 
 Software
 ========
+
+In this section we begin to cover Intermediate topics of importance for
+Software Team members. All software team members and team leaders should
+be aware of what is documented here.
+
+Python 3
+--------
+
+Python 3 will likely be used throughout our project. Check out the
+[official docs](https://docs.python.org/3/).
 
 QGroundControl (QGC) Mission Planner
 ------------------------------------
@@ -139,35 +168,96 @@ something more like this.
     HEADLESS=1 make px4_sitl gazebo-classic_standard_vtol
     exit
 
-Design
-======
-
-Insert 3D CAD file link.
-
-Electronics
+3D CAD Team
 ===========
 
-Components list here.
+Here's our current [model](https://a360.co/3ufcpI2)
+
+We may or may not be covering mission planning on this team.
+
+Electronics Team
+================
+
+This is our
+[components](https://docs.google.com/spreadsheets/d/1Tah2RrGbtXM58vIQXKMKE_LqVQVQTJHqW0JtdlxkLvY/edit?usp=sharing)
+list.
+
+We will be running PX4 Autopilot on the Pixhawk (with missions uploaded
+at the least).
+
+It will be connected to a Raspberry Pi running ROS (with ROS nodes for
+Obstacle Avoidance and Target Detection using
+[OpenCV)](https://pypi.org/project/opencv-python/) as a companion
+computer.
 
 Competition
 ===========
 
+The UAV competition is due in 3 pieces
+
 Design
 ------
 
-Not to be confusion with the current team name.
+May 2024
 
 Simulation
 ----------
 
+May 2024
+
 Flight
 ------
 
-Design (Competition)
-====================
+June 2024, both manned and unmanned (3 challenges).
+
+Design
+======
 
 Simulation
 ==========
 
+Gazebo and Gazebo Classic are the 2 main simulators under consideration.
+Gazebo Classic runs on older Ubuntu (such as 20.04) and Gazebo on newer
+(22.04).
+
 Flight
 ======
+
+Challenges
+==========
+
+The UAV Competion has 3 challenges (1 - easiest to 3 - hardest)
+
+1.  Waypoint Navigation
+2.  Obstacle Avoidance
+3.  Target Detection and Package Dropoff
+
+We will need to complete these Unmanned and Manned.
+
+Waypoint Navigation
+===================
+
+This is relatively straightforward. Check out QGS.
+
+Obstacle Avoidance
+==================
+
+[check out its github](https://github.com/PX4/PX4-Avoidance/tree/master)
+
+We will need to figure out a way to commuicate a 3D Point Cloud
+(i.e. [sensor\_msgs::PointCloud2](https://docs.ros.org/en/melodic/api/sensor_msgs/html/msg/PointCloud2.html))
+with our sensors (Camera and perhaps an ultrasonic sensor) and ROS
+nodes. One idea is [Rviz](http://wiki.ros.org/rviz/DisplayTypes/Camera).
+[Research nodes please!](https://index.ros.org/)
+
+Target Detection and Package Dropoff
+====================================
+
+This will require OpenCV from the rpi camera module (wide angle plus
+lens).
+
+[Offboard mode](https://docs.px4.io/main/en/flight_modes/offboard.html)
+is under consideration.
+
+[This is a starting
+point](https://circuitcellar.com/research-design-hub/write-an-object-tracking-drone-application/)

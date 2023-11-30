@@ -1,1 +1,1 @@
-# Design (Competition)
+# Design

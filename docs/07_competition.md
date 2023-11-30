@@ -1,9 +1,16 @@
 # Competition
 
+The UAV competition is due in 3 pieces
+
 ## Design
 
-Not to be confusion with the current team name.
+May 2024
 
 ## Simulation
 
+May 2024
+
+
 ## Flight
+
+June 2024, both manned and unmanned (3 challenges).
