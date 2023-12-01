@@ -38,8 +38,8 @@ Getting Started
 This section is designed to simplify onboarding. Please be aware of the
 structure of Project "Teams" as well, covered shortly.
 
-Software
---------
+Software Team
+-------------
 
 Working on the Software Team effectively requires extensive knowledge of
 multiple software stacks that have not entirley been listed, let alone
@@ -83,44 +83,17 @@ This is unnecessary for Ubuntu.
 need to setup PX4 Autopilot to run Gazebo (Classic) under OpenGL by
 running Ubuntu 20.04 or higher natively. This is especially important
 for simulating Target Detection and Package Dropoff (Challenge).
-Documentation has not been created at this time.
+Documentation has not been created at this time. \# Teams
 
-3D CAD
-------
+This following sections more clearly define the UAV Project Teams and
+the overall internal project structure. We have been divided into 2
+teams--Software and Mechanical. Be mindful of the Project organization
+and goals. In order to effectively manage this project we will want to
+be informed properly. Please stay in touch with your team leaders and
+try not to overload any single AEC member.
 
-No 3D CAD Team section yet.
-
-Electronics
------------
-
-No Electronics Team section either.
-
-Teams
-=====
-
-This section more clearly defines the UAV Project teams and overall
-internal structure of the UAV Project. We have been divided into 3 teams
-by the Club President. Be mindful of the Project organization and goals
-at all times. In order to effectively manage this project we need to be
-in sync and informed properly. Know who to talk to about what and when
-to not overload any AEC member. We all have to manage our school and
-even work duties. Please stay in touch with your team leader regularly
-and only go to the Club President for this project if needed.
-
-Software
---------
-
-This Github is a great place to be involved on the Software Team. Please
-come to meeting and check our AEC Discord regularly! Welcome team!
-
-3D CAD
-------
-
-Electronics
------------
-
-Software
-========
+Software Team
+=============
 
 In this section we begin to cover Intermediate topics of importance for
 Software Team members. All software team members and team leaders should
@@ -168,15 +141,15 @@ something more like this.
     HEADLESS=1 make px4_sitl gazebo-classic_standard_vtol
     exit
 
-3D CAD Team
-===========
+Mechanical Team
+===============
+
+The mechanical team works with the physical components, electronics, and
+3D design of our VTOL UAV, etc.
 
 Here's our current [model](https://a360.co/3ufcpI2)
 
 We may or may not be covering mission planning on this team.
-
-Electronics Team
-================
 
 This is our
 [components](https://docs.google.com/spreadsheets/d/1Tah2RrGbtXM58vIQXKMKE_LqVQVQTJHqW0JtdlxkLvY/edit?usp=sharing)
@@ -193,7 +166,7 @@ computer](https://docs.px4.io/main/en/companion_computer/).
 Competition
 ===========
 
-The UAV competition is due in 3 pieces
+The UAV competition is broken into 3 submissions/due dates.
 
 Design
 ------
@@ -205,23 +178,14 @@ Simulation
 
 May 2024
 
-Flight
-------
-
-June 2024, both manned and unmanned (3 challenges).
-
-Design
-======
-
-Simulation
-==========
-
 Gazebo and Gazebo Classic are the 2 main simulators under consideration.
 Gazebo Classic runs on older Ubuntu (such as 20.04) and Gazebo on newer
 (22.04).
 
 Flight
-======
+------
+
+June 2024, both manned and unmanned (3 challenges).
 
 Challenges
 ==========
