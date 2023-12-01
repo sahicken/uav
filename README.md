@@ -83,7 +83,15 @@ This is unnecessary for Ubuntu.
 need to setup PX4 Autopilot to run Gazebo (Classic) under OpenGL by
 running Ubuntu 20.04 or higher natively. This is especially important
 for simulating Target Detection and Package Dropoff (Challenge).
-Documentation has not been created at this time. \# Teams
+Documentation has not been created at this time.
+
+### Using GitHub
+
+You should get more familiar with git. Atlassian has a solid [cheat
+sheet.](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet).
+
+Teams
+=====
 
 This following sections more clearly define the UAV Project Teams and
 the overall internal project structure. We have been divided into 2
