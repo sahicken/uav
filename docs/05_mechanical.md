@@ -1,4 +1,10 @@
-# Electronics Team
+# Mechanical Team
+
+The mechanical team works with the physical components, electronics, and 3D design of our VTOL UAV, etc.
+
+Here's our current [model](https://a360.co/3ufcpI2)
+
+We may or may not be covering mission planning on this team.
 
 This is our [components](https://docs.google.com/spreadsheets/d/1Tah2RrGbtXM58vIQXKMKE_LqVQVQTJHqW0JtdlxkLvY/edit?usp=sharing) list.
 

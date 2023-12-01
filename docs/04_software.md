@@ -1,7 +1,6 @@
-# Software
+# Software Team
 
 In this section we begin to cover Intermediate topics of importance for Software Team members. All software team members and team leaders should be aware of what is documented here.
-
 
 ## Python 3
 

@@ -2,7 +2,7 @@
 
 This section is designed to simplify onboarding. Please be aware of the structure of Project "Teams" as well, covered shortly.
 
-## Software
+## Software Team
 
 Working on the Software Team effectively requires extensive knowledge of multiple software stacks that have not entirley been listed, let alone documented. I will continue to update this documenation. Please refer to Discord for more up-to-date info.
 
@@ -17,11 +17,3 @@ Most Linux distros running a desktop environment should work for beginning the U
 After installing a supported distro, you can install docker using [these instructions for Fedora](https://docs.docker.com/engine/install/fedora/) or [the Ubuntu instructions here](https://docs.docker.com/engine/install/ubuntu/). On Fedora you **must** run `sudo systemctl start docker` after every reboot or instead just [configure docker to start upon boot](https://docs.docker.com/engine/install/linux-postinstall/#configure-docker-to-start-on-boot-with-systemd). This is unnecessary for Ubuntu.
 
 3D acceleration is unsupported on Docker for the UAV Project. You will need to setup PX4 Autopilot to run Gazebo (Classic) under OpenGL by running Ubuntu 20.04 or higher natively. This is especially important for simulating Target Detection and Package Dropoff (Challenge). Documentation has not been created at this time.
-
-## 3D CAD
-
-No 3D CAD Team section yet.
-
-## Electronics
-
-No Electronics Team section either.
