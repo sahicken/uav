@@ -185,10 +185,10 @@ list.
 We will be running PX4 Autopilot on the Pixhawk (with missions uploaded
 at the least).
 
-It will be connected to a Raspberry Pi running ROS (with ROS nodes for
+It will be connected to a Raspberry Pi running ROS with ROS nodes for
 Obstacle Avoidance and Target Detection using
-[OpenCV)](https://pypi.org/project/opencv-python/) as a companion
-computer.
+[OpenCV](https://pypi.org/project/opencv-python/) as a [companion
+computer](https://docs.px4.io/main/en/companion_computer/).
 
 Competition
 ===========
