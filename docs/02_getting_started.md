@@ -12,10 +12,12 @@ Working on the Software Team effectively requires extensive knowledge of multipl
 
 ### Dependencies
 
-You should get more familiar with git. Atlassian has a solid [cheat sheet.](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet).
-
 Most Linux distros running a desktop environment should work for beginning the UAV Project, however [Fedora](https://docs.fedoraproject.org/en-US/fedora/latest/getting-started/) or [Ubuntu](https://ubuntu.com/tutorials/install-ubuntu-desktop) will be assumed. On Windows installing virtualization software such as [VMware](https://en.wikipedia.org/wiki/VMware_Workstation_Player) or [Virtualbox](https://en.wikipedia.org/wiki/VirtualBox) is necessary. **WSL2 does not yet work with these instructions!** 12GB RAM or more is highly recommended for virtualization. To reduce RAM requirements consider installing either Lubuntu or Xubuntu.
 
 After installing a supported distro, you can install docker using [these instructions for Fedora](https://docs.docker.com/engine/install/fedora/) or [the Ubuntu instructions here](https://docs.docker.com/engine/install/ubuntu/). On Fedora you **must** run `sudo systemctl start docker` after every reboot or instead just [configure docker to start upon boot](https://docs.docker.com/engine/install/linux-postinstall/#configure-docker-to-start-on-boot-with-systemd). This is unnecessary for Ubuntu.
 
 3D acceleration is unsupported on Docker for the UAV Project. You will need to setup PX4 Autopilot to run Gazebo (Classic) under OpenGL by running Ubuntu 20.04 or higher natively. This is especially important for simulating Target Detection and Package Dropoff (Challenge). Documentation has not been created at this time.
+
+### Using GitHub
+
+You should get more familiar with git. Atlassian has a solid [cheat sheet.](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet).
