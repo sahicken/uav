@@ -59,8 +59,18 @@ links!**
 
 ### Dependencies
 
+[QGroundControl](http://qgroundcontrol.com/) is current mission planning
+software used by this project. Without hardware, you must use some kind
+of simulator. Additionally, even with working hardware, running a fully
+constructed drone during development runs the risk of damaging expensive
+equipment. I recommend running the simulator with HEADLESS=1 (no gui)
+preprended to whatever `make` build you choose unless serious
+visualization is necessary, particularly if running non-natively. The
+GUI version of the simulator requires significant graphical horsepower
+using OpenGL.
+
 Most Linux distros running a desktop environment should work for
-beginning the UAV Project, however
+beginning the UAV Project's PX4 simulation, however
 [Fedora](https://docs.fedoraproject.org/en-US/fedora/latest/getting-started/)
 or [Ubuntu](https://ubuntu.com/tutorials/install-ubuntu-desktop) will be
 assumed. On Windows installing virtualization software such as
@@ -81,9 +91,18 @@ This is unnecessary for Ubuntu.
 
 3D acceleration is unsupported on Docker for the UAV Project. You will
 need to setup PX4 Autopilot to run Gazebo (Classic) under OpenGL by
-running Ubuntu 20.04 or higher natively. This is especially important
-for simulating Target Detection and Package Dropoff (Challenge).
-Documentation has not been created at this time.
+running Ubuntu 20.04 or higher **natively**. This is especially
+important for simulating Target Detection and Package Dropoff
+(Challenge). Minimal documentation has been created for many of the
+later challenges.
+
+For a more accurate simulation, use a [Raspberry Pi with Ubuntu running
+ROS](https://wiki.ros.org/ROSberryPi) during the simulation. The likely
+goal here is to have camera input from [ROS 2 affect behavior on the PX4
+Simulator](https://docs.px4.io/main/en/ros/ros2.html) over PX4's best
+supported
+[middleware](https://docs.px4.io/main/en/middleware/uxrce_dds.html).
+This is necessary to enable Obstacle Avoidance.
 
 ### Using GitHub
 
@@ -123,8 +142,14 @@ installation is recommended for Ubuntu and
 [Flatpak](https://flathub.org/apps/org.mavlink.qgroundcontrol) for
 Fedora.
 
-Running PX4 Autopilot in Gazebo Classic Simulator
--------------------------------------------------
+QGC expects either real hardware or a software simulator perform
+non-trivial functionality of the program (e.g. sensors, running a
+mission). In order to work effectively on the Software Team you should
+be become more familiar with QGC by at least running a simple
+simulation.
+
+Running PX4 Autopilot in Gazebo Classic Simulator (no gui, linux kernel)
+------------------------------------------------------------------------
 
     docker run -it --net=host -v ~/src/PX4-Autopilot:/src/PX4-Autopilot/:rw --name=sim px4io/px4-dev-simulation-focal:2023-06-26 bash
     cd src/
@@ -148,6 +173,11 @@ something more like this.
     cd src/PX4-Autopilot/
     HEADLESS=1 make px4_sitl gazebo-classic_standard_vtol
     exit
+
+QGC, Deeper Integration with ROS
+--------------------------------
+
+This section is currently a placeholder.
 
 Mechanical Team
 ===============
@@ -218,12 +248,18 @@ Obstacle Avoidance
 
 We will need to figure out a way to commuicate a 3D Point Cloud
 (i.e. [sensor\_msgs::PointCloud2](https://docs.ros.org/en/melodic/api/sensor_msgs/html/msg/PointCloud2.html))
-with our sensors (Camera and perhaps an ultrasonic sensor) and ROS
-nodes. One idea is [Rviz](http://wiki.ros.org/rviz/DisplayTypes/Camera).
-[Research nodes please!](https://index.ros.org/)
+utilizing our sensors (a wide angle camera) and ROS nodes. One idea is
+[Rviz](http://wiki.ros.org/rviz/DisplayTypes/Camera). On their site you
+can [search nodes](https://index.ros.org/).
 
-Target Detection and Package Dropoff
-====================================
+ROS2 XRCE-DDS BRIDGE PX4
+------------------------
+
+We will need to connect the PX4 to our raspberry pi running ROS. Work
+should be started on simulating PX4 on our raspberry pi and
+communicating over the bridge. A significant portion of club resources
+should be delegated to research a solution to the problem described in
+the above section. \# Target Detection and Package Dropoff
 
 This will require OpenCV from the rpi camera module (wide angle plus
 lens).
