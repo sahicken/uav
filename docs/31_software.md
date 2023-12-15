@@ -10,7 +10,9 @@ Python 3 will likely be used throughout our project. Check out the [official doc
 
 QGroundControl or simply QGC is a frontend for mission planning and partially visualizing simulations. [AppImage](https://docs.qgroundcontrol.com/master/en/getting_started/download_and_install.html) installation is recommended for Ubuntu and [Flatpak](https://flathub.org/apps/org.mavlink.qgroundcontrol) for Fedora.
 
-## Running PX4 Autopilot in Gazebo Classic Simulator
+QGC expects either real hardware or a software simulator perform non-trivial functionality of the program (e.g. sensors, running a mission). In order to work effectively on the Software Team you should be become more familiar with QGC by at least running a simple simulation.
+
+## Running PX4 Autopilot in Gazebo Classic Simulator (no gui, linux kernel)
 
 	docker run -it --net=host -v ~/src/PX4-Autopilot:/src/PX4-Autopilot/:rw --name=sim px4io/px4-dev-simulation-focal:2023-06-26 bash
 	cd src/
@@ -28,4 +30,8 @@ Only the first command in the above codeblock is outside the container. Leave th
 	cd src/PX4-Autopilot/
 	HEADLESS=1 make px4_sitl gazebo-classic_standard_vtol
 	exit
+
+## QGC, Deeper Integration with ROS
+
+This section is currently a placeholder.
 	
